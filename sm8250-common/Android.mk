@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter instantnoodle instantnoodlep,$(TARGET_DEVICE)),)
+ifneq ($(filter instantnoodle instantnoodlep kebab,$(TARGET_DEVICE)),)
 
 endif
