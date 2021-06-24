@@ -7,8 +7,19 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/odm/etc/odm_feature_list:$(TARGET_COPY_OUT_ODM)/etc/odm_feature_list \
+    vendor/oneplus/kebab/proprietary/system/lib/libyuv.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libyuv.so \
+    vendor/oneplus/kebab/proprietary/system_ext/lib64/libCameraMDMHelper.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libCameraMDMHelper.so \
+    vendor/oneplus/kebab/proprietary/system_ext/lib64/vendor.oneplus.hardware.camera@1.0-adapter-helper.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.oneplus.hardware.camera@1.0-adapter-helper.so \
+    vendor/oneplus/kebab/proprietary/system_ext/lib64/vendor.oneplus.hardware.camera@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.oneplus.hardware.camera@1.0.so \
+    vendor/oneplus/kebab/proprietary/system_ext/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0-adapter-helper.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0-adapter-helper.so \
+    vendor/oneplus/kebab/proprietary/system_ext/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so \
     vendor/oneplus/kebab/proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti \
+    vendor/oneplus/kebab/proprietary/vendor/bin/hw/vendor.oneplus.hardware.camera@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.oneplus.hardware.camera@1.0-service \
+    vendor/oneplus/kebab/proprietary/vendor/bin/hw/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service \
     vendor/oneplus/kebab/proprietary/vendor/bin/hw/vendor.pixelworks.hardware.display.iris-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.pixelworks.hardware.display.iris-service \
+    vendor/oneplus/kebab/proprietary/vendor/bin/vl53l1_daemon_main:$(TARGET_COPY_OUT_VENDOR)/bin/vl53l1_daemon_main \
+    vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
+    vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/acdb_version:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/acdb_version \
     vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
     vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/MTP_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_General_cal.acdb \
     vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Global_cal.acdb \
@@ -17,23 +28,20 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
     vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
     vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_workspaceFile.qwsp \
-    vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/MTP/acdb_version:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/acdb_version \
-    vendor/oneplus/kebab/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
-    vendor/oneplus/kebab/proprietary/vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode:$(TARGET_COPY_OUT_VENDOR)/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode \
-    vendor/oneplus/kebab/proprietary/vendor/etc/camera/ashdr/ncf_pack.ncf:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ashdr/ncf_pack.ncf \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/ashdr/ncf_pack_imx471.ncf:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ashdr/ncf_pack_imx471.ncf \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/ashdr/ncf_pack_imx481.ncf:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ashdr/ncf_pack_imx481.ncf \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/ashdr/ncf_pack_imx586.ncf:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ashdr/ncf_pack_imx586.ncf \
+    vendor/oneplus/kebab/proprietary/vendor/etc/camera/ashdr/ncf_pack.ncf:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ashdr/ncf_pack.ncf \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/calibrationOutput_uw.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/calibrationOutput_uw.bin \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/darksight/darksight_main.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/darksight/darksight_main.bin \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/darksight/darksight_ultrawide.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/darksight/darksight_ultrawide.bin \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/depth.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/depth.dlc \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/distortion_result.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/distortion_result.bin \
+    vendor/oneplus/kebab/proprietary/vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode:$(TARGET_COPY_OUT_VENDOR)/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/model.data:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model.data \
     vendor/oneplus/kebab/proprietary/vendor/etc/camera/segment.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/segment.dlc \
     vendor/oneplus/kebab/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
     vendor/oneplus/kebab/proprietary/vendor/etc/init/calibrationOutput_uw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/calibrationOutput_uw.rc \
-    vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm1.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm1.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm10.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm10.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm11.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm11.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm12.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm12.txt \
@@ -43,6 +51,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm16.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm16.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm17.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm17.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm18.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm18.txt \
+    vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm1.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm1.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm2.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm2.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm3.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm3.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm4.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm4.txt \
@@ -52,12 +61,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm8.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm8.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/inparm/irissoft/inParm9.txt:$(TARGET_COPY_OUT_VENDOR)/etc/inparm/irissoft/inParm9.txt \
     vendor/oneplus/kebab/proprietary/vendor/etc/irissoft.fw:$(TARGET_COPY_OUT_VENDOR)/etc/irissoft.fw \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/bmi26x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bmi26x_0.json \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/bmi26x_0_crt.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bmi26x_0_crt.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/bmi26x_0_crt_cfg.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bmi26x_0_crt_cfg.json \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/bmi26x_0_crt.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bmi26x_0_crt.json \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/bmi26x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bmi26x_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/bmp380_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bmp380_0.json \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_T0_sx9324_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_T0_sx9324_0.json \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_T0_sx9324up_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_T0_sx9324up_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_ak991x_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_bmi26x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_bmi26x_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_bmp380_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_bmp380_0.json \
@@ -88,12 +95,14 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_sx9324_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_sx9324_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_sx9324up_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_sx9324up_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_sx932x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_sx932x_0.json \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_T0_sx9324_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_T0_sx9324_0.json \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_T0_sx9324up_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_T0_sx9324up_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_tcs3408.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_tcs3408.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_tcs3701.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_tcs3701.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_tcs3707.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_tcs3707.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/kona_tmd2725_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_tmd2725_0.json \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/lsm6dsm_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lsm6dsm_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/lsm6dsm_0_8g.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lsm6dsm_0_8g.json \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/lsm6dsm_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lsm6dsm_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/mmc5603x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/mmc5603x_0.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/sns_amd.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_amd.json \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/config/sns_amd_sw_disabled.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_amd_sw_disabled.json \
@@ -141,8 +150,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/descriptor.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/descriptor.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/nanopb.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/nanopb.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/qti_gravity.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/qti_gravity.proto \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_accel.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_accel.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_accel_cal.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_accel_cal.proto \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_accel.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_accel.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_activity_recognition.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_activity_recognition.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_ambient_light.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_ambient_light.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_ambient_temperature.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_ambient_temperature.proto \
@@ -157,9 +166,9 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_client.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_client.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_cmc.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_cmc.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_cmd.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_cmd.proto \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_da_test.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_da_test.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_dae.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_dae.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_data_acquisition_engine.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_data_acquisition_engine.proto \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_da_test.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_da_test.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_device_mode.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_device_mode.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_device_orient.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_device_orient.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_diag.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_diag.proto \
@@ -174,8 +183,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_game_rv.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_game_rv.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_geomag_rv.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_geomag_rv.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_gravity.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_gravity.proto \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_gyro.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_gyro.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_gyro_cal.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_gyro_cal.proto \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_gyro.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_gyro.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_gyro_rot_matrix.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_gyro_rot_matrix.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_hall.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_hall.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_heart_beat.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_heart_beat.proto \
@@ -183,8 +192,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_hinge_angle.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_hinge_angle.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_humidity.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_humidity.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_interrupt.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_interrupt.proto \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_mag.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_mag.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_mag_cal.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_mag_cal.proto \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_mag.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_mag.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_mcmd.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_mcmd.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_motion_detect.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_motion_detect.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_multishake.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_multishake.proto \
@@ -211,10 +220,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_sensor_temperature.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_sensor_temperature.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_sig_motion.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_sig_motion.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_signal_sensor.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_signal_sensor.proto \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_sim.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_sim.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_sim_legacy.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_sim_legacy.proto \
-    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_std.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_std.proto \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_sim.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_sim.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_std_event_gated_sensor.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_std_event_gated_sensor.proto \
+    vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_std.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_std.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_std_sensor.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_std_sensor.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_std_type.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_std_type.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_step_detect.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_step_detect.proto \
@@ -228,31 +237,16 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/sns_wrist_tilt_gesture.proto \
     vendor/oneplus/kebab/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
     vendor/oneplus/kebab/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
+    vendor/oneplus/kebab/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
     vendor/oneplus/kebab/proprietary/vendor/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/CFR_OnePlus_UW_photo_preview.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/CFR_OnePlus_UW_photo_preview.bin \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/CFR_OnePlus_UW_video.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/CFR_OnePlus_UW_video.bin \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/CFR_para2_OnePlus_EF017_UW_snapshot.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/CFR_para2_OnePlus_EF017_UW_snapshot.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.eeprom.truly_cmb433.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.gc02m1b.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.gc02m1b.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.gc5035.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.gc5035.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.imx471.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx471.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.imx481.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx481.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.imx586.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx586.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.holitech_gc02m1b.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.holitech_gc02m1b.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.qtech_imx481.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.qtech_imx481.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.semco_imx586.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.semco_imx586.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.shine_gc5035.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.shine_gc5035.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.truly_imx471.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.truly_imx471.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.holitech_gc02m1b.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.holitech_gc02m1b.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.qtech_imx481.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.qtech_imx481.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.semco_imx586.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.semco_imx586.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.shine_gc5035.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.shine_gc5035.bin \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.truly_imx471.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.truly_imx471.bin \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.oneplus.node.cfrsnapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.oneplus.node.cfrsnapshot.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.oneplus.node.cfrvideo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.oneplus.node.cfrvideo.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.oneplus.node.memcpy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.oneplus.node.memcpy.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.oneplus.node.preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.oneplus.node.preview.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.oneplus.node.preview_nv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.oneplus.node.preview_nv.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.oneplus.node.preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.oneplus.node.preview.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.oneplus.node.rtb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.oneplus.node.rtb.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.oneplus.node.sat.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.oneplus.node.sat.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.camx.chiiqutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.camx.chiiqutils.so \
@@ -272,38 +266,186 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.node.remosaic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.remosaic.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.node.stich.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.stich.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.node.swregistration.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.swregistration.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.aec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.aec.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.aecwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.aecwrapper.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.af.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.af.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.afd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.afd.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.afwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.afwrapper.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.asd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.asd.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.awb.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.awbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.awbwrapper.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.haf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.haf.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.hafoverride.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.hafoverride.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.pdlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.pdlib.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibsony.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.pdlibsony.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.pdlibwrapper.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.tracker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.tracker.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.aec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.aec.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.af.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.af.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.awb.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.pdlib.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.aec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.aec.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.aecwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.aecwrapper.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.afd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.afd.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.af.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.af.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.afwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.afwrapper.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.asd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.asd.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.awb.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.awbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.awbwrapper.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.hafoverride.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.hafoverride.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.haf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.haf.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.pdlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.pdlib.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibsony.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.pdlibsony.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.pdlibwrapper.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/com.qti.stats.tracker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.tracker.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/components/libdepthmapwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/libdepthmapwrapper.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.eeprom.truly_cmb433.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.gc02m1b.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.gc02m1b.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.gc5035.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.gc5035.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.imx471.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx471.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.imx481.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx481.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensor.imx586.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx586.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.holitech_gc02m1b.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.holitech_gc02m1b.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.qtech_imx481.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.qtech_imx481.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.semco_imx586.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.semco_imx586.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.shine_gc5035.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.shine_gc5035.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.sensormodule.truly_imx471.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.truly_imx471.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.holitech_gc02m1b.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.holitech_gc02m1b.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.qtech_imx481.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.qtech_imx481.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.semco_imx586.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.semco_imx586.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.shine_gc5035.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.shine_gc5035.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/camera/com.qti.tuned.truly_imx471.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.truly_imx471.bin \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/fdconfigpreview.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigpreview.bin \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigpreviewlite.bin \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideo.bin \
     vendor/oneplus/kebab/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.anchorsync.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.anchorsync.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.demux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.demux.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.frameselect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.frameselect.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.fusion.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.generic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.generic.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.gs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.gs.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.hdr.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.memcpy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.memcpy.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.mfsr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.mfsr.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.qcfa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.qcfa.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.rawhdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.rawhdr.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.rt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.rt.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.serializer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.serializer.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.stub.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/com.qti.feature2.swmf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.swmf.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/fp_hal_extension.so:$(TARGET_COPY_OUT_VENDOR)/lib64/fp_hal_extension.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.qcom.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/hw/goodix.fod.kona.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/goodix.fod.kona.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/hw/goodix.g6.fod.kona.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/goodix.g6.fod.kona.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libalCFRLV_dsp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalCFRLV_dsp.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libalCFRLV.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalCFRLV.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libalCFR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalCFR.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libAlgoProcess.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAlgoProcess.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libalHexController.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalHexController.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libancbase_segbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libancbase_segbase.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libAncSegBaseSdk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAncSegBaseSdk.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libapsdarksight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapsdarksight.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libapsexif.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapsexif.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libaps_frame_registration.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaps_frame_registration.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libapsjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapsjpeg.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_beautyshot_4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_beautyshot_4.0.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_beautyshot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_beautyshot.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_calibverify_TriCamera.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_calibverify_TriCamera.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_dualcam_bokeh_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_bokeh_api.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_dualcam_refocus_left.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_refocus_left.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_dualcam_refocus_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_refocus_preview.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_dualcam_refocus_right.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_refocus_right.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_dualcam_refocus_uw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_refocus_uw.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_fringe_remove.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_fringe_remove.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_hdr_couple_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdr_couple_api.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_hdr_denoise_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdr_denoise_api.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_hdr_denoise_api_v4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdr_denoise_api_v4.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_hdrplus_hvx_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdrplus_hvx_stub.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_high_dynamic_range_couple.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_high_dynamic_range_couple.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_high_dynamic_range.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_high_dynamic_range_v4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_high_dynamic_range_v4.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_hta.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hta.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_low_light_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_low_light_hdr.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_mfsr_frt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_mfsr_frt.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_portrait_distortion_correction_20801.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_portrait_distortion_correction_20801.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_portrait_distortion_correction.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_portrait_distortion_correction.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_smart_denoise.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_smart_denoise.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_smart_denoise_v4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_smart_denoise_v4.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_stripe_removal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_stripe_removal.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_super_night_raw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_super_night_raw.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_superportrait.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_superportrait.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_tricam_calibration.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_tricam_calibration.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_tricam_verification.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_tricam_verification.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libarcsoft_video_fringing_correction.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_video_fringing_correction.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libarm_proxy_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarm_proxy_skel.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/lib_bokehlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_bokehlib.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera_nn_stub.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamerapostproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamerapostproc.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxexternalformatutils.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxfacialfeatures.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfacialfeatures.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxfdalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfdalgo.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxfdengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfdengine.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxifestriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxifestriping.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamximageformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamximageformatutils.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxncs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxncs.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxstatscore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxstatscore.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxswprocessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxswprocessalgo.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxtintlessalgo_21.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxtintlessalgo_21.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcamxtintlessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxtintlessalgo.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libchilog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libchilog.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcom.qti.chinodeutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcom.qti.chinodeutils.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libc++_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++_shared.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcvface_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvface_api.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcvp2_hfi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvp2_hfi.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcvp2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvp2.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcvp_common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvp_common.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libcvpcpuRev_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvpcpuRev_skel.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libdualcam_image_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdualcam_image_optical_zoom.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libdualcam_optical_zoom_control.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdualcam_optical_zoom_control.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libdualcam_video_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdualcam_video_optical_zoom.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libFaceBeautyLiteCap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFaceBeautyLiteCap.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libfastov_dsp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastov_dsp.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libgf_g6_ud_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_g6_ud_hal.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libgf_ud_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_ud_hal.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libhvx_proxy_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhvx_proxy_stub.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libipebpsstriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libipebpsstriping.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterdeviceutils.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterprovision.so \
     vendor/oneplus/kebab/proprietary/vendor/lib64/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterutils.so \
-    vendor/oneplus/kebab/proprietary/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc2.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libmmcamera_faceproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libmorpho_dcface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmorpho_dcface.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libmorpho_image_refiner_deflicker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmorpho_image_refiner_deflicker.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmpbase.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libnightvision.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnightvision.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libnpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnpu.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libofflinelog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libofflinelog.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/lib_oneplus_vivideffect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_oneplus_vivideffect.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/lib_oneplus_watermark.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_oneplus_watermark.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libop-bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libop-bokeh.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libOPPO_Front_SCPortrait.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOPPO_Front_SCPortrait.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libOPPO_SCPortrait.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOPPO_SCPortrait.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libos.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libPlatformValidatorShared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libPlatformValidatorShared.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libPolarrRender.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libPolarrRender.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libqtikeymaster4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtikeymaster4.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsnpe_adsp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnpe_adsp.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsnpe_dsp_domains.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnpe_dsp_domains.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsnpe_dsp_domains_v2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnpe_dsp_domains_v2.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsnpe_loader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnpe_loader.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libSNPE.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSNPE.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libSonyIMX471RmscLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSonyIMX471RmscLibrary.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libstblur_capture_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstblur_capture_api.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libSuperSensorFallback.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensorFallback.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libSuperSensorProcessorCWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensorProcessorCWrapper.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libSuperSensorProcessor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensorProcessor.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libSuperSensor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensor.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswregistrationalgo.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsymphony-cpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsymphony-cpu.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsymphonypower.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsymphonypower.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libsynx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsynx.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libthreadutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthreadutils.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libtriplecam_image_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplecam_image_optical_zoom.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libtriplecam_optical_zoom_control.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplecam_optical_zoom_control.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libtriplecam_video_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplecam_video_optical_zoom.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libVDBlurless.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libVDBlurless.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libVDDualCameraBlurlessAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libVDDualCameraBlurlessAPI.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libVDFusionBlurlessAPI_v2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libVDFusionBlurlessAPI_v2.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libVDSuperPhotoAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libVDSuperPhotoAPI.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libvl53l1_daemon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvl53l1_daemon.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/libyuv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libyuv2.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/sensors.hal.tof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.hal.tof.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.oneplus.hardware.camera@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oneplus.hardware.camera@1.0.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxexternalformatutils.so \
+    vendor/oneplus/kebab/proprietary/vendor/lib/libyuv2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libyuv2.so
